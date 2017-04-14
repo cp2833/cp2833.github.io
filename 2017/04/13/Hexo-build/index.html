@@ -71,7 +71,7 @@
 <link href="/AprilSpring/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Hexo," />
 
 
 
@@ -89,12 +89,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="AprilSpring">
-<meta property="og:url" content="http://yoursite.com/AprilSpring/index.html">
+<meta name="description" content="终于搭建好了自己的博客，借助前辈们的基础，自己也踩了几个坑。下面就谈谈，身为菜鸟的我，是怎么一步步操作的。 一、Hexo搭建  必要软件下载node.js：https://nodejs.org/en/git：https://git-scm.com/downloads/  Github账号注册和Repository创建申请页面：https://github.com/记录好 用户名，Email，密码新">
+<meta name="keywords" content="Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo build">
+<meta property="og:url" content="http://yoursite.com/AprilSpring/2017/04/13/Hexo-build/index.html">
 <meta property="og:site_name" content="AprilSpring">
+<meta property="og:description" content="终于搭建好了自己的博客，借助前辈们的基础，自己也踩了几个坑。下面就谈谈，身为菜鸟的我，是怎么一步步操作的。 一、Hexo搭建  必要软件下载node.js：https://nodejs.org/en/git：https://git-scm.com/downloads/  Github账号注册和Repository创建申请页面：https://github.com/记录好 用户名，Email，密码新">
+<meta property="og:updated_time" content="2017-04-13T09:36:06.686Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AprilSpring">
+<meta name="twitter:title" content="Hexo build">
+<meta name="twitter:description" content="终于搭建好了自己的博客，借助前辈们的基础，自己也踩了几个坑。下面就谈谈，身为菜鸟的我，是怎么一步步操作的。 一、Hexo搭建  必要软件下载node.js：https://nodejs.org/en/git：https://git-scm.com/downloads/  Github账号注册和Repository创建申请页面：https://github.com/记录好 用户名，Email，密码新">
 
 
 
@@ -122,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/AprilSpring/"/>
+  <link rel="canonical" href="http://yoursite.com/AprilSpring/2017/04/13/Hexo-build/"/>
 
 
 
 
 
-  <title> AprilSpring </title>
+  <title> Hexo build | AprilSpring </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -153,9 +158,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -258,9 +261,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -290,10 +293,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/AprilSpring/2017/04/13/Hexo-build/" itemprop="url">
-                  Hexo build
-                </a>
+                Hexo build
               
             
           </h1>
@@ -366,329 +366,125 @@
       
 
       
-        
-          <p>终于搭建好了自己的博客，借助前辈们的基础，自己也踩了几个坑。<br>下面就谈谈，身为菜鸟的我，是怎么一步步操作的。</p>
+        <p>终于搭建好了自己的博客，借助前辈们的基础，自己也踩了几个坑。<br>下面就谈谈，身为菜鸟的我，是怎么一步步操作的。</p>
 <p><strong>一、Hexo搭建</strong></p>
 <ol>
-<li><p>必要软件下载<br>node.js：<a href="https://nodejs.org/en/">https://nodejs.org/en/</a><br>git：<a href="https://git-scm.com/downloads/">https://git-scm.com/downloads/</a></p>
+<li><p>必要软件下载<br>node.js：<a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a><br>git：<a href="https://git-scm.com/downloads/" target="_blank" rel="external">https://git-scm.com/downloads/</a></p>
 </li>
-<li><p>Github账号注册和Repository创建<br>申请页面：<a href="https://github.com/">https://github.com/</a><br>记录好 <strong>用户名，Email，密码</strong><br>新建Repository，我的库名为AprilSpring。</p>
+<li><p>Github账号注册和Repository创建<br>申请页面：<a href="https://github.com/" target="_blank" rel="external">https://github.com/</a><br>记录好 <strong>用户名，Email，密码</strong><br>新建Repository，我的库名为AprilSpring。</p>
 </li>
 </ol>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/AprilSpring/2017/04/13/Hexo-build/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+<a id="more"></a>
+<ol>
+<li><p>创建SSH秘钥<br>打开git bash终端，输入<br><em>git config –global user.name “你的GitHub用户名”</em><br><em>git config –global user.email “你的GitHub注册邮箱”</em><br>这里需要你上面的用户名和邮箱。</p>
+</li>
+<li><p>生成SSH秘钥<br><em>ssh-keygen -t rsa -C “你的GitHub注册邮箱”</em><br>此时，在C:/Users/User/下，生成一个.ssh文件夹，记事本打开其中的id_rsa.pub，并拷贝。<br>然后，打开Github，在用户头像→Settings→SSH and GPG keys→New SSH key→将id_rsa.pub中的内容复制到Key文本框中，然后点击Add SSH key(添加SSH)按钮。</p>
+</li>
+<li><p>开始安装Hexo<br>打开你的终端（可以用cmd），进入到blog下面：<br><em>npm install hexo-cli g  #安装hexo<br>hexo init blog  #初始化博客文件夹<br>cd blog  #切换到该路径<br>npm install  #安装hexo的扩展插件<br>npm install hexo-server --save  #安装其它插件<br>npm install hexo-admin --save<br>npm install hexo-generator-archive --save<br>npm install hexo-generator-feed --save<br>npm install hexo-generator-search --save<br>npm install hexo-generator-tag --save<br>npm install hexo-deployer-git --save<br>npm install hexo-generator-sitemap --save</em></p>
+</li>
+<li><p>更改配置文件<br>打开blog/_config.yml，进行下面修改：<br><em>deploy:<br>&emsp;type: git<br>&emsp;repo: git@github.com:AprilSpring/AprilSpring.git<br>&emsp;branch: master
+</em><br>值得注意的是，git@github.com:<strong>???</strong>/<strong>&amp;&amp;&amp;</strong>.git，???应该为你Github的用户名，而&amp;&amp;&amp;应该为你Github库的名字。<br>为了避免弄错，可以先备份一份。</p>
+</li>
+<li><p>部署到Github服务器上<br>首先，生成静态页面：<em>hexo generate 或 hexo g</em><br>而后，可以通过开启开启本地服务器来查看我们的Blog：<em>hexo sever 或 hexo s</em><br>将Blog部署到Github服务器上：<em>hexo deploy 或 hexo d</em><br>有时，你可能还需要 清除静态页面：<em>hexo clean</em>，来从新部署。<br>这时，打开你的网页：<a href="https://aprilspring.github.io/AprilSpring/" target="_blank" rel="external">https://aprilspring.github.io/AprilSpring/</a></p>
+<font color="red" size="4">~~~你的博客来了！</font>
+
+
+</li>
+</ol>
+<p><strong>二、Hexo主题更换</strong><br>看了网上的几个Theme后，我选择了Next主题。<br><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">http://theme-next.iissnan.com/getting-started.html</a> 这个网页写的很详尽，就按照他的步骤安装和更改配置文件。<br>我选择了scheme: Pisces，还可以添加头像，棒棒的！</p>
+<p><strong>三、添加菜单</strong></p>
+<ol>
+<li>如果已经安装好了Next，就没有必要再额外添加菜单啦，因为在Next里面，就有参数可以选择菜单的添加。</li>
+<li>否则，请按下面进行：<br>新建一个页面，也就是添加新菜单，我们的这个菜单叫做”About”：<em>hexo new page “about”</em><br>然后你会发现source里面多了个目录about，里面有个index.md。<br>接着修改blog/themes/theme_name/_config.yml文件，找到里面的menu项，添加一行About: /about。</li>
+<li>那么如何编辑about呢？<br>直接修改source/about/index.md文件就ok啦。完美。</li>
+<li>同样的方式，可以添加并编辑Categories和Tags。</li>
+</ol>
+<p><strong>四、写一个博客</strong></p>
+<ol>
+<li><p>新建一个博客<br><em>hexo new post “BlogName”</em><br>然后，去blog/source/_posts/下面，找到这个BlogName.md，Notepad打开，进行编辑。</p>
+</li>
+<li><p>常用的MakeDown修饰语言<br>比如：字体、字号、加粗、缩进等。<br>参见：<a href="http://blog.csdn.net/u011419965/article/details/50536937#字体字号颜色" target="_blank" rel="external">http://blog.csdn.net/u011419965/article/details/50536937#字体字号颜色</a><br>特殊符号前面用反斜线”\”。</p>
+</li>
+<li><p>插入图片<br>首先，更改blog/_config.yml文件中的 <em>post_asset_folder: true</em><br>然后，运行： <em>npm install <a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="external">https://github.com/CodeFalling/hexo-asset-image</a> --save</em><br>确保在blog/source/_posts下创建和md文件同名的目录，在里面放该md需要的图片。<br>目录结构如下：<br>———————————————————<br><em>posts<br>&emsp;&emsp;|- post1.md<br>&emsp;&emsp;|</em> post1<br>&emsp;&emsp;&emsp;&emsp;|- pic1.png<br>———————————————————<br>而后，在md文件中需要插入图片的地方写上：<br><em>![](目录名/文件名.png)</em>，也即 <em>![](post1/pic1.png)</em>。<br>最后，依次执行：hexo clean、hexo g、hexo d，怎么样？图片在了吧？！</p>
+</li>
+<li><p>添加Read more<br>如果博文过长，可以在文中添加&lt;!–more–>，则该标记之前的部分就会成为该文章的简述，显示在首页里，其余隐藏。</p>
+</li>
+<li><p>在编辑博客的时候，可以hexo s打开本地服务器的博客，随时保存并刷新页面，以便查看自己写的博客，等完成之后一并部署。</p>
+</li>
+</ol>
+<p><strong>五、还要解决的问题</strong></p>
+<ol>
+<li>在线的Markdown编辑器，方便边编辑、边部署</li>
+<li>换了一台电脑，我该怎么写博客？怎么移植过去，还是？</li>
+</ol>
+<p><strong>特别鸣谢</strong><br><a href="http://blog.csdn.net/xuezhisdc/article/details/53130328" target="_blank" rel="external">http://blog.csdn.net/xuezhisdc/article/details/53130328</a><br><a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next</a><br><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">http://theme-next.iissnan.com/getting-started.html</a><br><a href="https://segmentfault.com/q/1010000000618915" target="_blank" rel="external">https://segmentfault.com/q/1010000000618915</a><br><a href="http://blog.csdn.net/u011419965/article/details/50536937#字体字号颜色" target="_blank" rel="external">http://blog.csdn.net/u011419965/article/details/50536937#字体字号颜色</a><br><a href="http://www.cnblogs.com/palance/p/5493201.html" target="_blank" rel="external">http://www.cnblogs.com/palance/p/5493201.html</a><br><a href="https://www.zhihu.com/question/52523619" target="_blank" rel="external">https://www.zhihu.com/question/52523619</a><br><a href="https://segmentfault.com/q/1010000002561642" target="_blank" rel="external">https://segmentfault.com/q/1010000002561642</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/AprilSpring/tags/Hexo/" rel="tag"># Hexo</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
+          <span class="post-nav-divider"></span>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/AprilSpring/AprilSpring/2017/04/12/My-New-Post/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="April">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/AprilSpring/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AprilSpring">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+          <div class="post-nav-prev post-nav-item">
             
+              <a href="/AprilSpring/2017/04/12/My-New-Post/" rel="prev" title="My New Post">
+                My New Post <i class="fa fa-chevron-right"></i>
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/AprilSpring/2017/04/12/My-New-Post/" itemprop="url">
-                  My New Post
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-12T13:39:17+08:00">
-                2017-04-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/AprilSpring/categories/Test/" itemprop="url" rel="index">
-                    <span itemprop="name">Test</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>第一次搭建Blog！<br><img src="/AprilSpring/2017/04/12/My-New-Post/test.jpg" alt=""></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/AprilSpring/AprilSpring/2017/04/11/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="April">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/AprilSpring/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AprilSpring">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/AprilSpring/2017/04/11/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T18:15:47+08:00">
-                2017-04-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -696,6 +492,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -906,6 +706,10 @@
 
 
   
+  <script type="text/javascript" src="/AprilSpring/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/AprilSpring/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 

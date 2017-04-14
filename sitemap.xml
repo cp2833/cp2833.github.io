@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://yoursite.com/AprilSpring/2017/04/13/Hexo-build/</loc>
+    
+    <lastmod>2017-04-13T09:36:06.686Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/AprilSpring/tags/index.html</loc>
+    
+    <lastmod>2017-04-13T07:51:10.173Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/AprilSpring/categories/index.html</loc>
+    
+    <lastmod>2017-04-13T07:47:43.533Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/AprilSpring/2017/04/12/My-New-Post/</loc>
+    
+    <lastmod>2017-04-13T07:47:29.229Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/AprilSpring/about/index.html</loc>
+    
+    <lastmod>2017-04-13T07:45:37.904Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/AprilSpring/2017/04/11/hello-world/</loc>
+    
+    <lastmod>2017-04-11T10:15:47.171Z</lastmod>
+    
+  </url>
+  
+</urlset>
